@@ -1,0 +1,160 @@
+package playing_field;
+
+import static org.junit.Assert.*;
+
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+public class GameBoard_test {
+
+//	@BeforeClass
+//	public static void setUpBeforeClass() throws Exception {
+//	}
+//
+//	@Test
+//	public void testGameBoard() {
+//		fail("Not yet implemented");
+//	}
+	
+	String[] nicknames = {"Tick", "Trick", "Track"};
+	GameBoard test;
+
+	@Test
+	public void test_player_init()
+	{
+		//startwerte der Player
+		test = new GameBoard(3, nicknames);
+		
+		assertEquals(3, test.getPlayers().size());
+		
+		assertEquals("Tick", test.getPlayers().get(0).get_username());
+		assertEquals("Trick", test.getPlayers().get(1).get_username());
+		assertEquals("Track", test.getPlayers().get(2).get_username());
+		
+		assertEquals("red", test.getPlayers().get(0).get_colour());
+		assertEquals("green", test.getPlayers().get(1).get_colour());
+		assertEquals("blue", test.getPlayers().get(2).get_colour());
+		
+		assertEquals(true, test.getPlayers().get(0).has_double_move());
+		assertEquals(true, test.getPlayers().get(0).has_gust_of_wind());
+		assertEquals(true, test.getPlayers().get(0).has_large_donkey_cart());
+		assertEquals(true, test.getPlayers().get(0).has_one_fruit_less());
+		
+		assertEquals(0, test.getPlayers().get(0).get_fruitcount("orange"));
+		assertEquals(0, test.getPlayers().get(0).get_fruitcount("lemon"));
+		assertEquals(0, test.getPlayers().get(0).get_fruitcount("olive"));
+		assertEquals(0, test.getPlayers().get(0).get_fruitcount("fig"));
+		assertEquals(0, test.getPlayers().get(0).get_fruitcount("grape"));
+		assertEquals(0, test.getPlayers().get(0).get_fruitcount("spellingmisstake"));
+		
+		assertEquals(0, test.getPlayers().get(0).get_points());
+		assertEquals(0, test.getPlayers().get(0).get_donkeys());
+<<<<<<< .mine
+		System.out.println(test.getMap().get_communities().length);
+		
+
+=======
+		
+		
+		//startwerte der communities		
+		assertEquals(10, test.getMap().get_communities().size());
+		for(int i= 0; i<10; i++)
+		{
+			assertEquals(4, test.getMap().get_communities().get(i).get_number_of_fruitplates());
+			System.out.println(test.getMap().get_communities().get(i).get_fincatile().get_points());
+			System.out.println(test.getMap().get_communities().get(i).get_fincatile().is_almond());
+			System.out.println(test.getMap().get_communities().get(i).get_fincatile().is_fig());
+			System.out.println(test.getMap().get_communities().get(i).get_fincatile().is_grape());
+			System.out.println(test.getMap().get_communities().get(i).get_fincatile().is_lemon());
+			System.out.println(test.getMap().get_communities().get(i).get_fincatile().is_olive());
+			System.out.println(test.getMap().get_communities().get(i).get_fincatile().is_orange());
+			System.out.println(test.getMap().get_communities().get(i).get_fincatile().is_riddle());
+		}
+>>>>>>> .r115
+	}
+	@Test
+	public void test_communities_init()
+	{
+		assertEquals(10, test.getMap().get_communities().size());
+		
+		for(int i= 0; i<10; i++)
+			assertEquals(4, test.getMap().get_communities().get(i).get_number_of_fruitplates());
+		
+	}
+	@Test
+	public void test_windmill_init()
+	{
+		assertEquals(12, test.getMap().get_windmill().get_blade_array().length);
+		for(int i=0; i<12; i++)
+		{
+			assertEquals(false, test.getMap().get_windmill().get_blade_array()[i].has_farmer_here("red"));
+			assertEquals(false, test.getMap().get_windmill().get_blade_array()[i].has_farmer_here("blue"));
+			assertEquals(false, test.getMap().get_windmill().get_blade_array()[i].has_farmer_here("green"));
+			assertEquals(false, test.getMap().get_windmill().get_blade_array()[i].has_farmer_here("yellow"));
+			assertEquals(false, test.getMap().get_windmill().get_blade_array()[i].has_farmer_here("spellingmisstake"));
+			assertEquals(0, test.getMap().get_windmill().get_blade_array()[i].get_num_of_farmers());
+		}
+		for(int i=0; i<12; i++)
+		{
+			System.out.println((i+1) + ": " + test.getMap().get_windmill().get_blade_array()[i].get_resource_typ());
+		}
+	}
+
+/*
+	@Test
+	public void testAdd_fruit_pool() {
+		assertEquals(18, test._game_map.get_amount("almond"));
+		test.add_fruit_pool("almond", 2);
+		assertEquals(20, test._game_map.get_amount("almond"));
+	}
+
+	@Test
+	public void testRemove_fruit_pool() {
+		assertEquals(18, test._game_map.get_amount("almond"));
+		test.remove_fruit_pool("almond", 2);
+		assertEquals(16, test._game_map.get_amount("almond"));
+	}
+
+	@Test
+	public void testAdd_donkey_pool() {
+		assertEquals(4, test._game_map.get_donkycount());
+		test.add_donkey_pool();
+		assertEquals(5, test._game_map.get_donkycount());
+	}
+
+	@Test
+	public void testRemove_donkey_pool() {
+		assertEquals(4, test._game_map.get_donkycount());
+		test.remove_donkey_pool();
+		assertEquals(3, test._game_map.get_donkycount());
+	}
+
+ */
+
+	//NOT READY TO TEST , BEFORE IMPLEMENTATION DISCUSSION
+//	@Test
+//	public void testAdd_fruit_player() {
+//		fail("Not yet implemented");
+//	}
+//
+//	@Test
+//	public void testRemove_fruit_player() {
+//		fail("Not yet implemented");
+//	}
+//
+//	@Test
+//	public void testAdd_donkey_player() {
+//		fail("Not yet implemented");
+//	}
+//
+//	@Test
+//	public void testRemove_donkey_player() {
+//		fail("Not yet implemented");
+//	}
+//
+//	@Test
+//	public void testAdd_tile_player() {
+//		fail("Not yet implemented");
+//	}
+
+}

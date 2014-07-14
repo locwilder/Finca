@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/fincapro/!svn/ver/400/test/playing_field
+END
+GameBoard_test.java
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/fincapro/!svn/ver/400/test/playing_field/GameBoard_test.java
+END
+Finctatile_test.java
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/fincapro/!svn/ver/303/test/playing_field/Finctatile_test.java
+END
+Community_test.java
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/fincapro/!svn/ver/119/test/playing_field/Community_test.java
+END
+Turn_test.java
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/fincapro/!svn/ver/248/test/playing_field/Turn_test.java
+END
+Fincatiles_pool_test.java
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/fincapro/!svn/ver/319/test/playing_field/Fincatiles_pool_test.java
+END
+Map_test.java
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/fincapro/!svn/ver/77/test/playing_field/Map_test.java
+END

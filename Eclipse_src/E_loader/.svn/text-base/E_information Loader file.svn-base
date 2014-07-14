@@ -1,0 +1,14 @@
+
+beim loader file muss unter den run configurations (rechtsklick-->run as...-->run configurations) in
+der spalte (x)=arguments bei vm arguments folgendes stehen, damit der server starten kann:
+
+
+-Djava.rmi.server.hostname=localhost
+-Djava.rmi.server.codebase=file:/${project_loc}/bin/
+-Djava.security.policy=finca.policy
+
+wenn ihr einem game/chat beitreten möchtet, müsst ihr bei ip entweder 127.0.0.1 oder localhost eingeben, da das die
+loopback adresse des eigenen computers ist.
+
+bin hüt so ab em halbi 10ni im skype für oisi präsentatioinsvorbereitig...
+kündig

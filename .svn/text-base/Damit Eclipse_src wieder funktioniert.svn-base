@@ -1,0 +1,20 @@
+Damit Eclipse_src beim starten wieder funkrioniert, muess man 
+folgende Schritte befolgen:
+
+1. Erstelle eine Jar-Datei, es ist egal wo man speichert.
+
+2. Gehe auf die Datei Finca rechts-klick wähle "Run As" -> "Run Configurations.."
+
+3. Gehe auf Java Application rechts-klick "new"
+
+4.1 Gebe eine geeigneten Namen an
+4.2 Bei "Main" wählt man im Kaestchen unter "Main Class" "E_Loader" aus
+4.3 Gehe auf "Arguments" und kopiere die Property-Keys unter "VM Argument"
+4.4.1 Gehe weiter auf "Classpath" und lösche die Default-Datei unter "User-Entries"
+4.4.2 Klicke auf "Add External Jars" und wähle die Jar-Datei die du vorher erstellt hast
+
+5. Gehe jetzt auf "Source" und klick auf "Add" und wähle "Workspace Folder->Finca->Eclipse_src"
+
+6. Klicke auf "OK"-Button
+
+Gratuliere ;-) du hast es geschafft.
